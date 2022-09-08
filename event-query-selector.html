@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1 {
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <h1>JavaScript Event Query Selector All</h1>
+    <div>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties" 
+        target="_blank" class="delete">Delete</a>
+    </div>
+    <script>
+        var deleteLink = document.querySelectorAll('.delete');
+        for (var i = 0; i < deleteLink.length; i++) {
+            deleteLink[i].addEventListener('click', function (event) {
+                if (!confirm("Are you sure to Delete " + this.title)) {
+                    event.preventDefault();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

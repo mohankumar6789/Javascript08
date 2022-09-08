@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1 {
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <h1>JavaScript Event Prevent Default</h1>
+    <label>Enter any text</label>
+    <br/>
+    <input type="input" id="prevent">
+    <script>
+        document.getElementById("prevent").addEventListener("input",(e)=>{
+            if(event.cancelable){
+                alert("Input Event is Cancelled")
+            }
+            else{
+                alert("Input Event is not Cancelled. Please proceed to type")
+            }
+        })
+    </script>
+</body>
+
+</html>

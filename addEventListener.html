@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1 {
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <h1>JavaScript AddEventListener</h1>
+    <p id="demo">Mohan Kumar</p>
+    <button id="demo1">AddEventListener</button>
+    <script>
+        var result =  document.getElementById("demo1");
+        result.addEventListener("click", myFunction);
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Welcome to Javascript";
+        }
+    </script>
+</body>
+
+</html>
